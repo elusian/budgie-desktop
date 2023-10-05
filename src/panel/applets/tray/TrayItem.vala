@@ -163,7 +163,7 @@ internal class TrayItem : Gtk.EventBox {
 		}
 
 		if (icon_name != null && icon_name.length > 0) {
-			var icon_theme = Gtk.IconTheme.get_default();
+			var icon_theme = new Gtk.IconTheme();
 			if (icon_theme_path != null && !icon_theme.has_icon(icon_name)) {
 				icon_theme.prepend_search_path(icon_theme_path);
 			}
